@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_baseline_account_balance.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_home.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_menu.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_notifications.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_search.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/menu_click_color.xml" value="0.2595" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_main.xml" value="0.3851851851851852" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_main2.xml" value="0.33611111111111114" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_alert.xml" value="0.3085399449035813" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_community.xml" value="0.3085399449035813" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_home.xml" value="0.30193236714975846" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/menu/menu_bottom.xml" value="0.3851851851851852" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/menu/menu_top_home.xml" value="0.3851851851851852" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
