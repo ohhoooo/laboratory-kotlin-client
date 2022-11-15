@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rtitle"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:hint="제목"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rcontents"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <TextView
+        android:id="@+id/rcontents"
+        android:layout_width="363dp"
+        android:layout_height="396dp"
+        android:hint="내용(contents)"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rtitle"
+        app:layout_constraintBottom_toTopOf="@id/btnLike"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <Button
+        android:id="@+id/btnLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Like"
+        app:layout_constraintTop_toBottomOf="@id/rcontents"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@id/rcontents"
+        app:layout_constraintLeft_toLeftOf="@id/rpostTime"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="595dp" />
+
+    <TextView
+        android:id="@+id/ruserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="작성자"
+        app:layout_constraintRight_toLeftOf="@id/btnLike"
+        app:layout_constraintTop_toBottomOf="@id/rtitle"
+        app:layout_constraintBottom_toTopOf="@id/rcontents"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <TextView
+        android:id="@+id/rpostTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="작성일"
+        app:layout_constraintRight_toRightOf="@id/rtitle"
+        app:layout_constraintTop_toBottomOf="@id/rtitle"
+        app:layout_constraintBottom_toTopOf="@id/rcontents"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <TextView
+        android:id="@+id/rlikenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="좋아요 수"
+        app:layout_constraintTop_toBottomOf="@id/rtitle"
+        app:layout_constraintBottom_toTopOf="@id/rcontents"
+        app:layout_constraintLeft_toLeftOf="@id/rtitle"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

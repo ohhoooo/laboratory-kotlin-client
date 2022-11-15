@@ -1,4 +1,4 @@
-package com.irlab.testappkotlin
+package com.irlab.testappkotlin.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,8 +15,8 @@ class MainActivity2 : AppCompatActivity() {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
-        supportActionBar?.setTitle("")
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setSupportActionBar(binding.toolbar) // 툴바 등록
+        supportActionBar?.setTitle("") // 제목 설정
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) // 뒤로 가기 버튼 활성화
     }
 }

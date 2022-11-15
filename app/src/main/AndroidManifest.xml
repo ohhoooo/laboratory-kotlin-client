@@ -14,20 +14,50 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Testappkotlin"
-        tools:targetApi="31">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31"
+
+        android:name=".KakaoApplication">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
-    </application>
+        <activity
+            android:name=".server.ReadPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".server.PostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity2"
+            android:exported="false"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false">
+        </activity>
+        <activity android:name=".ui.GoogleLogin"/>
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
 
+                <data android:host="oauth"
+                    android:scheme="from kakao developer"/>
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".KakaoLogin"/>
+    </application>
 </manifest>

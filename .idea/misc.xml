@@ -4,17 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_baseline_account_balance.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_baseline_border_color_24.xml" value="0.143" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.143" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_home.xml" value="0.259" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_menu.xml" value="0.259" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_notifications.xml" value="0.259" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/ic_search.xml" value="0.259" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/imageview_shape.xml" value="0.4395" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/line_divider.xml" value="0.2085" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/menu_click_color.xml" value="0.2595" />
-        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_main.xml" value="0.3851851851851852" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/drawable/recyclerview_divider.xml" value="0.1" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_login.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_main.xml" value="0.35336538461538464" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_main2.xml" value="0.33611111111111114" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_post.xml" value="0.35885416666666664" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/activity_read_post.xml" value="0.3734375" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_alert.xml" value="0.3085399449035813" />
-        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_community.xml" value="0.3085399449035813" />
-        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_home.xml" value="0.30193236714975846" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_community.xml" value="0.1" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_home.xml" value="0.17177914110429449" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/fragment_settings.xml" value="0.3093645484949833" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/item_crawling.xml" value="0.32266666666666666" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/layout/list_item.xml" value="0.2861111111111111" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/menu/menu_bottom.xml" value="0.3851851851851852" />
+        <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/menu/menu_community_top.xml" value="0.3723958333333333" />
         <entry key="..\:/Users/KJH/AndroidStudioProjects/testappkotlin/app/src/main/res/menu/menu_top_home.xml" value="0.3851851851851852" />
       </map>
     </option>
