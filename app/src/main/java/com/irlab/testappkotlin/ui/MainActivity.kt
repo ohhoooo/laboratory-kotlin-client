@@ -31,9 +31,13 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.tab1 -> {
-                    supportFragmentManager.beginTransaction().hide(alertFragment).commit()
-                    supportFragmentManager.beginTransaction().hide(communityFragment).commit()
-                    supportFragmentManager.beginTransaction().show(homeFragment).commit()
+                    if(binding.bottomNavigation.selectedItemId == R.id.tab1) {
+                        homeFragment.binding.recyclerView.scrollToPosition(0)
+                    }else {
+                        supportFragmentManager.beginTransaction().hide(alertFragment).commit()
+                        supportFragmentManager.beginTransaction().hide(communityFragment).commit()
+                        supportFragmentManager.beginTransaction().show(homeFragment).commit()
+                    }
                     true
                 }
                 R.id.tab2 -> {
