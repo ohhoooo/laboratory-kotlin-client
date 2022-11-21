@@ -36,12 +36,39 @@ class KakaoLogin : AppCompatActivity() {
                     if(error != null) {
                         Log.e("loginInFirebase", "사용자 정보 가져오기 : Failure", error)
                     }else if(user != null) {
-                        val userEmail = Objects.requireNonNull(user.kakaoAccount?.email)
-                        val userID = Objects.requireNonNull(user.id.toString())
-                        val userName = user.kakaoAccount?.profile?.nickname
-                        if (userEmail != null) {
-                            if (userName != null) {
-                                loginFirebase(userEmail,userID,userName)
+                        val scopes = mutableListOf<String>()
+                        if(user.kakaoAccount!!.emailNeedsAgreement == true) scopes.add("account_email")
+
+                        if(scopes.isEmpty()) {
+                            val userEmail = Objects.requireNonNull(user.kakaoAccount!!.email)
+                            val userID = Objects.requireNonNull(user.id.toString())
+                            val userName = user.kakaoAccount!!.profile!!.nickname
+                            loginFirebase(userEmail!!, userID, userName!!)
+                        }else {
+                            UserApiClient.instance.loginWithNewScopes(applicationContext, scopes) { token, error ->
+                                if(error != null) {
+
+                                } else {
+                                    UserApiClient.instance.me { user, error ->
+                                        if(error != null) {
+
+                                        }else if(user!!.kakaoAccount!!.emailNeedsAgreement == false) {
+                                            val userEmail = Objects.requireNonNull(user.kakaoAccount!!.email)
+                                            val userID = Objects.requireNonNull(user.id.toString())
+                                            val userName = user.kakaoAccount!!.profile!!.nickname
+                                            loginFirebase(userEmail!!, userID, userName!!)
+                                        }else if(user.kakaoAccount!!.emailNeedsAgreement == true) {
+                                            UserApiClient.instance.logout {
+                                                if(it != null) {
+
+                                                }else {
+
+                                                }
+                                                return@logout
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
