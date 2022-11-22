@@ -104,7 +104,7 @@ class CommunityFragment : Fragment() {
 
                         val json = JSONArray(lines)
                         for(i in 0 until json.length()) {
-                            val jsonObject = json.getJSONObject(i)
+                            val jsonObject = json.getJSONObject(json.length() -1 -i)
                             Log.d("22323323213",json.length().toString())
                             Log.d("22323323213",jsonObject.getString("title"))
 

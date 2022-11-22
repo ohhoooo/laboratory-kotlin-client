@@ -6,6 +6,8 @@ import android.text.Editable
 import android.widget.Button
 import android.widget.EditText
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.irlab.testappkotlin.R
 import okhttp3.*
 import org.json.JSONException
@@ -17,6 +19,8 @@ import java.util.*
 class PostActivity : AppCompatActivity() {
 
     private val sendURL = "http://203.232.193.162:5000/sendserver"
+    private lateinit var mAuth : FirebaseAuth
+    private lateinit var user : FirebaseUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +29,8 @@ class PostActivity : AppCompatActivity() {
         val btnSave = findViewById<Button>(R.id.button)
         val txtTitle = findViewById<EditText>(R.id.editTextTextPersonName)
         val txtContents = findViewById<EditText>(R.id.editTextTextMultiLine)
+        mAuth = FirebaseAuth.getInstance()
+        user = mAuth.currentUser!!
 
         btnSave.setOnClickListener {
             val savePostThread = SavePostThread(txtTitle.text, txtContents.text)
