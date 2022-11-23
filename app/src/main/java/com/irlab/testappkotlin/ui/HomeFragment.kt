@@ -55,8 +55,11 @@ class HomeFragment : Fragment() {
     }
 
     // 화면 새로고침
+    // 구글링해서 나온 방법들이나 detach, attach 로는 해결이 안되서 생각한 방법
+    // 실제 출시된 어플들이랑 동작방식이 비슷한거 같다
     private fun setUpSwipeRefresh() {
-        recyclerViewAdapter.refresh()
+        initRecyclerView()
+        initViewModel()
         binding.swipe.isRefreshing = false // 스레드 종료 시, 리프레시 종료
     }
 
