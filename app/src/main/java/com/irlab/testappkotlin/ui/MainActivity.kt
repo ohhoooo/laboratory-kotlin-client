@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.irlab.testappkotlin.R
 import com.irlab.testappkotlin.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.fragment_quasarzone.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var homeFragment: HomeFragment
-    private lateinit var alertFragment: SettingsFragment
+    private lateinit var tabFragment: TabFragment
     private lateinit var communityFragment: CommunityFragment
+    private lateinit var settingsFragment: SettingsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,13 +19,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 초기 화면 지정(Fragment)
-        homeFragment = HomeFragment()
-        alertFragment = SettingsFragment()
+        tabFragment = TabFragment()
         communityFragment = CommunityFragment()
-        supportFragmentManager.beginTransaction().add(R.id.constraint, alertFragment).commit()
+        settingsFragment = SettingsFragment()
+
+        supportFragmentManager.beginTransaction().add(R.id.constraint, tabFragment).commit()
+        supportFragmentManager.beginTransaction().add(R.id.constraint, settingsFragment).commit()
         supportFragmentManager.beginTransaction().add(R.id.constraint, communityFragment).commit()
-        supportFragmentManager.beginTransaction().add(R.id.constraint, homeFragment).commit()
-        supportFragmentManager.beginTransaction().hide(alertFragment).commit()
+        supportFragmentManager.beginTransaction().hide(settingsFragment).commit()
         supportFragmentManager.beginTransaction().hide(communityFragment).commit()
 
         // 바텀 네비게이션뷰 리스너(화면전환)
@@ -32,24 +34,24 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.tab1 -> {
                     if(binding.bottomNavigation.selectedItemId == R.id.tab1) {
-                        homeFragment.binding.recyclerView.scrollToPosition(0)
+                        tabFragment.recyclerView.scrollToPosition(0)
                     }else {
-                        supportFragmentManager.beginTransaction().hide(alertFragment).commit()
+                        supportFragmentManager.beginTransaction().hide(settingsFragment).commit()
                         supportFragmentManager.beginTransaction().hide(communityFragment).commit()
-                        supportFragmentManager.beginTransaction().show(homeFragment).commit()
+                        supportFragmentManager.beginTransaction().show(tabFragment).commit()
                     }
                     true
                 }
                 R.id.tab2 -> {
-                    supportFragmentManager.beginTransaction().hide(alertFragment).commit()
-                    supportFragmentManager.beginTransaction().hide(homeFragment).commit()
+                    supportFragmentManager.beginTransaction().hide(settingsFragment).commit()
+                    supportFragmentManager.beginTransaction().hide(tabFragment).commit()
                     supportFragmentManager.beginTransaction().show(communityFragment).commit()
                     true
                 }
                 else -> {
                     supportFragmentManager.beginTransaction().hide(communityFragment).commit()
-                    supportFragmentManager.beginTransaction().hide(homeFragment).commit()
-                    supportFragmentManager.beginTransaction().show(alertFragment).commit()
+                    supportFragmentManager.beginTransaction().hide(tabFragment).commit()
+                    supportFragmentManager.beginTransaction().show(settingsFragment).commit()
                     true
                 }
             }

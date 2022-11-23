@@ -1,6 +1,5 @@
 package com.irlab.testappkotlin.ui
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,15 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.irlab.testappkotlin.R
-import com.irlab.testappkotlin.databinding.FragmentHomeBinding
+import com.irlab.testappkotlin.databinding.FragmentQuasarzoneBinding
 import com.irlab.testappkotlin.repository.QuasarzoneViewModel
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_quasarzone.*
 import kotlinx.coroutines.flow.collectLatest
 
-class HomeFragment : Fragment() {
+class QuasarzoneFragment : Fragment() {
 
-    lateinit var binding: FragmentHomeBinding
+    lateinit var binding: FragmentQuasarzoneBinding
     lateinit var recyclerViewAdapter: RecyclerViewAdapter
 
     override fun onCreateView(
@@ -26,7 +24,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentQuasarzoneBinding.inflate(inflater, container, false)
         init()
         initRecyclerView()
         initViewModel()
@@ -34,20 +32,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun init() {
-        // 툴바
-        binding.toolbarHome.inflateMenu(R.menu.menu_top_home) // 툴바 설정
-        binding.toolbarHome.title = "모든 게시글" // 툴바 제목
-        binding.toolbarHome.setOnMenuItemClickListener { // 툴바 리스너
-            when (it.itemId) {
-                R.id.search -> { // search 버튼을 눌렀을 때
-                    val intent = Intent(context, MainActivity2::class.java)
-                    startActivity(intent)
-                    true
-                }
-                else -> false
-            }
-        }
-
         // 화면 새로고침
         binding.swipe.setOnRefreshListener {
             setUpSwipeRefresh()
