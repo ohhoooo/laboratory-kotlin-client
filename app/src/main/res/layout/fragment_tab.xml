@@ -18,10 +18,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/black"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/tabTextSizeBold"
+        android:background="@color/gray"
+        app:tabIndicatorColor="@color/black"
+        app:tabRippleColor="@android:color/transparent"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
