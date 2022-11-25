@@ -6,7 +6,7 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 
 // PagingSource - 데이터 소스를 정의하고 이 소스에서 데이터를 가져오는 방법을 정의
-class PagingSource(
+class QuasarzonePagingSource(
     private val apiService: QuasarzoneService
 ) : PagingSource<Int, ItemModel>() {
     override fun getRefreshKey(state: PagingState<Int, ItemModel>): Int? {

@@ -15,7 +15,7 @@ class TabFragment : Fragment() {
     private lateinit var binding: FragmentTabBinding
     private val tabTitleArray = arrayOf(
         "퀘이사존",
-        "Tab2"
+        "뽐뿌"
     )
 
     override fun onCreateView(

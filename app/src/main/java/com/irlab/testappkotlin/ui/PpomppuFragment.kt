@@ -9,14 +9,14 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.irlab.testappkotlin.databinding.FragmentBlankBinding
-import com.irlab.testappkotlin.repository.QuasarzoneViewModel
-import kotlinx.android.synthetic.main.fragment_blank.*
+import com.irlab.testappkotlin.databinding.FragmentPpomppuBinding
+import com.irlab.testappkotlin.repository.PpomppuViewModel
+import kotlinx.android.synthetic.main.fragment_ppomppu.*
 import kotlinx.coroutines.flow.collectLatest
 
-class BlankFragment : Fragment() {
+class PpomppuFragment : Fragment() {
 
-    lateinit var binding: FragmentBlankBinding
+    lateinit var binding: FragmentPpomppuBinding
     lateinit var recyclerViewAdapter: RecyclerViewAdapter
 
     override fun onCreateView(
@@ -24,7 +24,7 @@ class BlankFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBlankBinding.inflate(inflater, container, false)
+        binding = FragmentPpomppuBinding.inflate(inflater, container, false)
         init()
         initRecyclerView()
         initViewModel()
@@ -60,7 +60,7 @@ class BlankFragment : Fragment() {
     }
 
     private fun initViewModel() {
-        val viewModel = ViewModelProvider(this).get(QuasarzoneViewModel::class.java)
+        val viewModel = ViewModelProvider(this).get(PpomppuViewModel::class.java)
         lifecycleScope.launchWhenCreated {
             viewModel.getListData().collectLatest {
                 recyclerViewAdapter.submitData(it)

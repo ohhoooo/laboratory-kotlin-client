@@ -8,7 +8,6 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.irlab.testappkotlin.network.*
 import kotlinx.coroutines.flow.Flow
-import retrofit2.create
 
 class QuasarzoneViewModel : ViewModel() {
     lateinit var retroService: QuasarzoneService
@@ -20,7 +19,7 @@ class QuasarzoneViewModel : ViewModel() {
     fun getListData(): Flow<PagingData<ItemModel>> {
         return Pager(
             config = PagingConfig(pageSize = 15), // 각 페이지에 로드해야 하는 항목 수
-            pagingSourceFactory = { PagingSource(retroService) } // PagingSource 인스턴스 생성
+            pagingSourceFactory = { QuasarzonePagingSource(retroService) } // PagingSource 인스턴스 생성
         ).flow.cachedIn(viewModelScope)
     }
 }

@@ -13,6 +13,6 @@ class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
             0 -> return QuasarzoneFragment()
         }
 
-        return BlankFragment()
+        return PpomppuFragment()
     }
 }

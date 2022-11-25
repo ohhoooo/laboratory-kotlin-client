@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.irlab.testappkotlin.R
 import com.irlab.testappkotlin.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.fragment_quasarzone.*
+import kotlinx.android.synthetic.main.fragment_ppomppu.view.recyclerView
+import kotlinx.android.synthetic.main.fragment_tab.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +35,11 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.tab1 -> {
                     if(binding.bottomNavigation.selectedItemId == R.id.tab1) {
-                        tabFragment.recyclerView.scrollToPosition(0)
+                        if(tabFragment.viewPager.currentItem == 0) {
+                            tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                        }else if(tabFragment.viewPager.currentItem == 1) {
+                            tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                        }
                     }else {
                         supportFragmentManager.beginTransaction().hide(settingsFragment).commit()
                         supportFragmentManager.beginTransaction().hide(communityFragment).commit()
