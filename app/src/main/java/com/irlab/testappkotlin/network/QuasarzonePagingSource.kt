@@ -76,7 +76,7 @@ class QuasarzonePagingSource(
             list.add(
                 ItemModel(
                     titleNullOrNot(title),
-                    "퀘이사존 | ",
+                    "퀘이사존 · ",
                     date,
                     category,
                     "♡  $like",

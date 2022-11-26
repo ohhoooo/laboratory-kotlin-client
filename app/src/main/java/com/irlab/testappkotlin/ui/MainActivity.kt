@@ -35,10 +35,16 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.tab1 -> {
                     if(binding.bottomNavigation.selectedItemId == R.id.tab1) {
-                        if(tabFragment.viewPager.currentItem == 0) {
-                            tabFragment.viewPager.recyclerView.scrollToPosition(0)
-                        }else if(tabFragment.viewPager.currentItem == 1) {
-                            tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                        when (tabFragment.viewPager.currentItem) {
+                            0 -> {
+                                tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                            }
+                            1 -> {
+                                tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                            }
+                            2 -> {
+                                tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                            }
                         }
                     }else {
                         supportFragmentManager.beginTransaction().hide(settingsFragment).commit()

@@ -77,7 +77,7 @@ class PpomppuPagingSource(
                 list.add(
                     ItemModel(
                         title,
-                        "뽐뿌 | ",
+                        "뽐뿌 · ",
                         date,
                         category,
                         "♡  " + likeZeroOrNot(like),
