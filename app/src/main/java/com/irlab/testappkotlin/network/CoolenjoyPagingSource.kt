@@ -73,7 +73,7 @@ class CoolenjoyPagingSource(
                 list.add(
                     ItemModel(
                         titleNullOrNot(title),
-                        "쿨엔조이 | ",
+                        "쿨엔조이 · ",
                         timeOrNot(date),
                         category,
                         "♡  $like",

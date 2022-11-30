@@ -1,6 +1,5 @@
 package com.irlab.testappkotlin.network
 
-
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import org.jsoup.Jsoup
@@ -51,6 +50,12 @@ class PpomppuPagingSource(
         else like.substring(13,15)
     }
 
+    // 시간이나 날짜를 판단하여 다르게 표기
+    private fun timeOrDate(date: String): String {
+        return if(date.contains(":")) date.substring(30,35)
+        else date.substring(33,38).replace("/","-")
+    }
+
     private fun jsoupGetData(doc: Document, page: Int): MutableList<ItemModel> {
         val list = mutableListOf<ItemModel>()
         val baseUrl = "https://www.ppomppu.co.kr/zboard/"
@@ -66,9 +71,7 @@ class PpomppuPagingSource(
                     .replace("]","")
                     .replace("</span>", "")
                 val comment = itemList[i].select(".list_comment2 span").text()
-                val date = itemList[i].select("td")
-                    .attr("title")
-                    .substring(9, 14)
+                val date = itemList[i].select("td nobr").last().toString()
                 val like = itemList[i].select("td").textNodes().toString()
                 val itemImage = itemList[i].select("img")
                     .attr("src")
@@ -78,7 +81,7 @@ class PpomppuPagingSource(
                     ItemModel(
                         title,
                         "뽐뿌 · ",
-                        date,
+                        timeOrDate(date),
                         category,
                         "♡  " + likeZeroOrNot(like),
                         "\uD83D\uDCAC  " + commentZeroOrNot(comment),
@@ -97,9 +100,7 @@ class PpomppuPagingSource(
                     .replace("]","")
                     .replace("</span>", "")
                 val comment = itemList[i].select(".list_comment2 span").text()
-                val date = itemList[i].select("td")
-                    .attr("title")
-                    .substring(9, 14)
+                val date = itemList[i].select("td nobr").last().toString()
                 val like = itemList[i].select("td").textNodes().toString()
                 val itemImage = itemList[i].select("img")
                     .attr("src")
@@ -108,8 +109,8 @@ class PpomppuPagingSource(
                 list.add(
                     ItemModel(
                         title,
-                        "뽐뿌 | ",
-                        date,
+                        "뽐뿌 · ",
+                        timeOrDate(date),
                         category,
                         "♡  " + likeZeroOrNot(like),
                         "\uD83D\uDCAC  " + commentZeroOrNot(comment),

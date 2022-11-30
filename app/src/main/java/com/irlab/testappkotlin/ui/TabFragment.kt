@@ -14,8 +14,9 @@ class TabFragment : Fragment() {
 
     private lateinit var binding: FragmentTabBinding
     private val tabTitleArray = arrayOf(
-        "퀘이사존",
+        "전체",
         "뽐뿌",
+        "퀘이사존",
         "쿨엔조이"
     )
 
