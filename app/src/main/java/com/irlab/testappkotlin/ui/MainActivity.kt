@@ -45,6 +45,9 @@ class MainActivity : AppCompatActivity() {
                             2 -> {
                                 tabFragment.viewPager.recyclerView.scrollToPosition(0)
                             }
+                            3 -> {
+                                tabFragment.viewPager.recyclerView.scrollToPosition(0)
+                            }
                         }
                     }else {
                         supportFragmentManager.beginTransaction().hide(settingsFragment).commit()
