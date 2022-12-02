@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="일반"
+        app:iconSpaceReserved="false"
+        android:layout="@layout/preferences_category">
+        <PreferenceScreen
+            android:key="logout"
+            android:layout="@layout/preferences_screen"
+            android:title="로그아웃"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

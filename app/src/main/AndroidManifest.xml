@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.irlab.testappkotlin">
+    package="com.irlab.crawlingapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -17,9 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31"
 
-        android:name=".KakaoApplication">
+        android:name="com.irlab.crawlingapp.KakaoApplication">
         <activity
-            android:name=".ui.LoginActivity"
+            android:name="com.irlab.crawlingapp.ui.LoginActivity"
             android:exported="false">
 
             <meta-data
@@ -27,17 +27,17 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".server.ReadPostActivity"
+            android:name="com.irlab.crawlingapp.server.ReadPostActivity"
             android:exported="false" />
         <activity
-            android:name=".server.PostActivity"
+            android:name="com.irlab.crawlingapp.server.PostActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity2"
+            android:name="com.irlab.crawlingapp.ui.MainActivity2"
             android:exported="false"
-            android:parentActivityName=".ui.MainActivity" />
+            android:parentActivityName="com.irlab.crawlingapp.ui.MainActivity" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.irlab.crawlingapp.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.GoogleLogin"/>
+        <activity android:name="com.irlab.crawlingapp.ui.GoogleLogin"/>
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
@@ -59,6 +59,6 @@
 
             </intent-filter>
         </activity>
-        <activity android:name=".KakaoLogin"/>
+        <activity android:name="com.irlab.crawlingapp.KakaoLogin"/>
     </application>
 </manifest>

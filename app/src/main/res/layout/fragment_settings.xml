@@ -18,13 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/preferences_fragment"
+        android:name="com.irlab.crawlingapp.ui.PreferenceFragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그아웃"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSetting"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarSetting"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout="@android:layout/preference_category"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

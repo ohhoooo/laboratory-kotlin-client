@@ -11,7 +11,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.irlab.testappkotlin"
+        applicationId "com.irlab.crawlingapp"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -62,6 +62,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    // Preference
+    implementation 'androidx.preference:preference:1.2.0'
 
     // 구글 관련
     implementation platform('com.google.firebase:firebase-bom:30.3.2')
