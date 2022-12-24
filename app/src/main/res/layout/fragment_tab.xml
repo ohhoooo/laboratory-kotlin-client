@@ -27,11 +27,11 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextColor="@color/white"
-        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/black"
+        app:tabSelectedTextColor="@color/white"
         app:tabTextAppearance="@style/tabTextSizeBold"
         android:background="@color/gray"
-        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorColor="@color/white"
         app:tabRippleColor="@android:color/transparent"/>
 
     <androidx.viewpager2.widget.ViewPager2
